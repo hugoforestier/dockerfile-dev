@@ -18,11 +18,11 @@ docker build -t docker-ctf .
 ```
 If using Windows
 ```sh
-      docker run --rm -v %cd%:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name ctf -i docker-ctf
+docker run --rm -v %cd%:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name ctf -i docker-ctf
 ```
 If using Linux
 ```sh
-      docker run --rm -v $PWD:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name ctf -i docker-ctf
+docker run --rm -v $PWD:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name ctf -i docker-ctf
 ```
 ```sh
 docker exec -it container-id /bin/bash
