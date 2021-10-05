@@ -14,9 +14,19 @@ git clone git@github.com:Actyy/dockerfile-ctf.git
 ## Usage
 
 ```sh
-./launch_dockerfile.sh
+docker build -t docker-ctf .
 ```
-
+If using Windows
+```sh
+      docker run --rm -v %cd%:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name ctf -i docker-ctf
+```
+If using Linux
+```sh
+      docker run --rm -v $PWD:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name ctf -i docker-ctf
+```
+```sh
+docker exec -it container-id /bin/bash
+```
 ## Author
 
 👤 **Acty**
