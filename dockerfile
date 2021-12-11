@@ -4,5 +4,4 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get upgrade && apt-get update && \
 apt-get install -y build-essential emacs strace cmake libssl-dev libffi-dev ltrace curl wget gcc
 RUN apt dist-upgrade
-RUN apt install linux-headers-$(uname -r)
 
